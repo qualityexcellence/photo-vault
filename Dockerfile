@@ -15,5 +15,6 @@ ENV PATH=/root/.local/bin:$PATH PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
 COPY backend/app /app/app
 COPY backend/main.py /app/main.py
 
+ENV PORT=8000
 EXPOSE 8000
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
