@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "aivaultphotosgcp",
+  "private_key_id": "31a07d8e210f7d1f5ec10fb122825d24e9a501d0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDLeCNlNaOmB823\n3V2dJg+MMRAawo3eQa8BPOOo4sMkV262MmG7IabyUSOpYQ48bA1M0sCSPp1Or4sm\nbbSnEYEdBEKiwBskCe9zDAA1h5/yynsiNncygV8UzZW006HWz3pMR9khvvNToJu2\ndEmFGFVJdW595cxZThSLrgupa5GxZq4I0y8FmKlqg/d24FNkGqkupZQewaUriP1M\nSriG4WaEoo26OW/eUhvUK+RTMULjJ2f7kRg+yw3+bCF//X3OG3kWuyONc3lMzRiA\nAaT2slwqnXu2RKRoQXuIkowBdM/cRv78y30o8qRdef4DQO2+CnxGlEIocEf9DoG1\nZCsvUjDPAgMBAAECggEASPGWBue29oPfrWXv9LG7ay//rQhIogB8Q/5XQ6mf+fxa\nVXk0bkj/N+n81fFUkDbQgdUgco1+CcKHKUy1MhvlZMitNvmWAVKKhH0t6gLoRbtv\nb3GFRBb7RlL5s60XXRJertAnOKDjTPzMNhn0bYGuuboe1YW3v+BtHzJTPfaxcZ5R\nKlzMysEqy0Z9yzmohy16+MVKkbdGVnY1VN6dYjnhaM4nkvDf3PTaT9hNjGO3TbS8\nIJY7h2vbfiyAHeijRrH7TJqyteLbrSR4ybtWGMZhYr33JZZKjyTmPnaZTdYsNYsK\nSHbzRQoD6H0pLOxA4FmH99oo2+p969yhVpIgJ6QquQKBgQDxVvyTJizZ9lsTGfox\nCBqZx/6SRw0S6HkLSt1hhrRhutEtPf0v0wUXuDYb5KcybG7JbUJ9UNR83rMDjQy9\n1iXB1C8460BDGNdInMIyvgViehY8n3Ix8itGEI1+aU7gx7j3/dHqFyYsmDGBRKCQ\nIlyuw8qmu3gGzBGwAYeOBz2KxQKBgQDX1Dy2h2/Yxp331kZWTVWPFnSWh0i+nH18\nAzyF9sJGc1/QuSkY5Zqf98z5Lv3IUTH1U95ET4Vp3ZLvOQaYHlfo+4x1OTjv1kZ8\nf7ZNCEgZWhCzKx3NQ2TUZ2Tt0SlScYQliCQraqbmNNL3pl4OIGikj045hl1Fy+Zk\npJo3kL5WgwKBgFLjqnoruWnfGCa2XFzsyJ4at4+sAYyF9dTwEJsHdfq+/EsKqGP9\nmRktdsAbx2UlIuPht91snp6IqnlEv6SP4YXyB4oIGpkw9fgFhxmAdD7/aZXGuaT3\n5O76jm5lYucHEbtzHN7GtqDIYPBiDreSZbzMmFStvKqw+j42OEWKrRN1AoGBAJ/b\nbiCPzhLUgZpYlf5EB1QVAMOhbgroY7UfvItIynpd6CDzk/IB1fYYFzSVTpk5MnSP\n6vfTonBYEgWnyi+PgfNppY4JlRdnMQvzl/YUZTqJ0Aa0r70h5qO/9SyEGEQdGhCm\ndovF0dp+U6fkDJQQAxGnpvvKfnk83ee7VxJC3ge7AoGAJFDobSlJBUjON5/wWsT2\nmX24mh/qhJmYSBXPMVFzSl1bfag6Hdqo1lrRtLcj4RpKQU+QK0+nEP4EWPMj9zGk\n64rjbNSIy7fVoFCF+e/7MezKTdwGNP6ZWLfWY0tCVKSU2wEb5Mc1b7qgxTWJDFVY\nXu148VpXjNXpHhY5sVvpp0s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "photo-vault-app@aivaultphotosgcp.iam.gserviceaccount.com",
+  "client_id": "112793365264821524495",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/photo-vault-app%40aivaultphotosgcp.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

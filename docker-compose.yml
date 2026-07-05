@@ -1,0 +1,66 @@
+version: '3.9'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: photo_vault_db
+    environment:
+      POSTGRES_USER: photo_user
+      POSTGRES_PASSWORD: secure_password
+      POSTGRES_DB: photo_vault
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U photo_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: photo_vault_cache
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: photo_vault_backend
+    environment:
+      DATABASE_URL: postgresql://photo_user:secure_password@postgres:5432/photo_vault
+      REDIS_URL: redis://redis:6379
+      GCP_PROJECT_ID: aivaultphotosgcp
+      GCS_BUCKET_NAME: aivaultphotosgcp-images
+      FIREBASE_CREDENTIALS_PATH: /app/firebase-credentials.json
+      JWT_SECRET_KEY: your-secret-key-change-in-production
+      DEBUG: "true"
+      LOG_LEVEL: INFO
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  postgres_data:
+
+networks:
+  default:
+    name: photo_vault_network

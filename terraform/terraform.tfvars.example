@@ -1,0 +1,6 @@
+gcp_project_id        = "your-project-id"
+gcp_region            = "us-central1"
+postgres_machine_type = "db-f1-micro"
+db_user               = "photo_user"
+container_image       = "us-central1-docker.pkg.dev/your-project-id/photo-vault/api:latest"
+environment           = "prod"

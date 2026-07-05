@@ -1,0 +1,6 @@
+# Copy this file to terraform.tfvars and fill in your values
+
+gcp_project_id = "aivaultphotosgcp"
+gcp_region     = "us-central1"
+redis_url      = "redis://your-redis-host:6379"
+environment    = "production"
