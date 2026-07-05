@@ -72,7 +72,7 @@ FastAPI Backend (Python)
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/ai-smart-photo-vault.git
+git clone https://github.com/qualityexcellence/ai-smart-photo-vault.git
 cd ai-smart-photo-vault
 ```
 
