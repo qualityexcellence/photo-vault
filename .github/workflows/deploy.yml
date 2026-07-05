@@ -57,20 +57,17 @@ jobs:
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy ${{ env.CLOUD_RUN_SERVICE }} \
-            --image ${{ env.REGISTRY }}/${{ secrets.GCP_PROJECT_ID }}/${{ env.IMAGE_NAME }}/backend:${{ github.sha }} \
-            --region ${{ env.CLOUD_RUN_REGION }} \
+          gcloud run deploy photo-vault-backend \
+            --image ${{ env.REGISTRY }}/${{ secrets.GCP_PROJECT_ID }}/photo-vault/backend:latest \
+            --region us-central1 \
             --platform managed \
             --allow-unauthenticated \
-            --set-env-vars DATABASE_URL=${{ secrets.DATABASE_URL }} \
-            --set-env-vars REDIS_URL=${{ secrets.REDIS_URL }} \
-            --set-env-vars GCP_PROJECT_ID=${{ secrets.GCP_PROJECT_ID }} \
-            --set-env-vars GCS_BUCKET=${{ secrets.GCS_BUCKET }} \
-            --set-env-vars ENVIRONMENT=production \
+            --port 8000 \
             --memory 512Mi \
             --cpu 1 \
             --timeout 300 \
-            --service-account photo-vault-app@aivaultphotosgcp.iam.gserviceaccount.com
+            --service-account photo-vault-app@aivaultphotosgcp.iam.gserviceaccount.com \
+            --set-env-vars ENVIRONMENT=production
 
       - name: Get Cloud Run URL
         run: |
