@@ -48,7 +48,7 @@ jobs:
             -t ${{ env.REGISTRY }}/${{ secrets.GCP_PROJECT_ID }}/${{ env.IMAGE_NAME }}/backend:${{ github.sha }} \
             -t ${{ env.REGISTRY }}/${{ secrets.GCP_PROJECT_ID }}/${{ env.IMAGE_NAME }}/backend:latest \
             -f Dockerfile \
-            ./backend
+            .
 
       - name: Push Docker image to Artifact Registry
         run: |
